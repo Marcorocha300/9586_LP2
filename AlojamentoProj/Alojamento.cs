@@ -1,39 +1,46 @@
 using System;
-public class Alojamento {
+public class Alojamento 
+{
 	private int id;
-	private string num;
+	public string num;
 	private string tipo;
 	private string lotacao;
-
-	public Alojamento() {
-		throw new System.Exception("Not implemented");
-	}
-	public int GetId() {
-		return this.id;
-	}
-	public void SetId(ref int id) {
-		this.id = id;
-	}
-	public string GetNum() {
-		return this.num;
-	}
-	public void SetNum(ref string num) {
-		this.num = num;
-	}
-	public string GetTipo() {
-		return this.tipo;
-	}
-	public void SetTipo(ref string tipo) {
-		this.tipo = tipo;
-	}
-	public string GetLotacao() {
-		return this.lotacao;
-	}
-	public void SetLotacao(ref string lotacao) {
-		this.lotacao = lotacao;
-	}
-
 	private Reserva reserva;
 	private Alojamentos alojamentos;
+
+	public Alojamento(string alojamento) 
+	{
+		this.num = alojamento;
+	}
+	
+	public int Id 
+	{
+		get{return	id;}	
+		set{id = value;}
+	}
+
+	public string Num
+	{
+		get{return	num;}	
+		set{num = value;}
+	}
+
+	public string Tipo	
+	{
+		get{return	tipo;}	
+		set{tipo = value;}
+	}
+
+	public string Lotacao
+	{
+		get{return	lotacao;}	
+		set{lotacao = value;}
+	}
+
+	public Reserva Reserva
+	{
+		get{return	reserva;}	
+		set{reserva = value;}
+	}
 
 }

@@ -1,6 +1,10 @@
 using System;
-public class Customers {
+
+public class Customers 
+{
 	private Customer[] customerList;
+	private Customer customer;
+	private Gestor gestor;
 
 	public void AddCustomer() {
 		throw new System.Exception("Not implemented");
@@ -14,8 +18,5 @@ public class Customers {
 	public Customers() {
 		throw new System.Exception("Not implemented");
 	}
-
-	private Customer customer;
-	private Gestor gestor;
 
 }

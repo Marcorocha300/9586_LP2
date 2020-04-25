@@ -1,70 +1,54 @@
 using System;
-public class Reserva {
+using System.Collections.Generic;
+
+public class Reserva 
+{	
+	#region Estado
+
 	private int id;
-	private int customerId;
-	private string idFuncionario;
-	private void dateReserva;
-	private void dateCheckin;
-	private void dateCheckout;
-	private int idAlojamento;
-	private float custo;
+	private DateTime dateReserva;
+	private DateTime dateCheckin;
+	private DateTime dateCheckout;
 	private Payment payment;
-
-	public int GetId() {
-		return this.id;
-	}
-	public void SetId(ref int id) {
-		this.id = id;
-	}
-	public string GetIdFuncionario() {
-		return this.idFuncionario;
-	}
-	public void SetIdFuncionario(ref string idFuncionario) {
-		this.idFuncionario = idFuncionario;
-	}
-	public void GetDateReserva() {
-		return this.dateReserva;
-	}
-	public void SetDateReserva(ref void dateReserva) {
-		this.dateReserva = dateReserva;
-	}
-	public void GetDateCheckin() {
-		return this.dateCheckin;
-	}
-	public void SetDateCheckin(ref void dateCheckin) {
-		this.dateCheckin = dateCheckin;
-	}
-	public void GetDateCheckout() {
-		return this.dateCheckout;
-	}
-	public void SetDateCheckout(ref void dateCheckout) {
-		this.dateCheckout = dateCheckout;
-	}
-	public int GetIdAlojamento() {
-		return this.idAlojamento;
-	}
-	public void SetIdAlojamento(ref int idAlojamento) {
-		this.idAlojamento = idAlojamento;
-	}
-	public GetCusto() {
-		throw new System.Exception("Not implemented");
-	}
-	public void SetCusto(ref  custo) {
-		throw new System.Exception("Not implemented");
-	}
-	public Reserva() {
-		throw new System.Exception("Not implemented");
-	}
-	public int GetCustumerId() {
-		throw new System.Exception("Not implemented");
-	}
-	public void SetCustumerId(ref int custumerId) {
-		throw new System.Exception("Not implemented");
-	}
-
-	private Alojamento[] alojamentos;
-
+	private List<Alojamento> alojamentos;
 	private Customer customer;
-	private Reservas reservas;
+
+	#endregion
+
+	public int Id
+	{
+		get{return id;}	
+		set{id = value;}
+	}
+
+	public DateTime DateReserva
+	{
+		get{return dateReserva;}	
+		set{dateReserva = value;}
+	}
+
+	public DateTime DateCheckin 
+	{
+		get{return dateCheckin;}	
+		set{dateCheckin = value;}
+	}
+
+	public DateTime DateCheckout 
+	{
+		get{return dateCheckout;}	
+		set{dateCheckout = value;}
+	}
+	
+	
+	public  Reserva(Customer customer, DateTime checkIn, DateTime checkOut, Alojamento aloj) 
+	{
+		this.dateReserva = DateTime.Now;
+		this.dateCheckin = checkIn;
+		this.dateCheckout = checkOut;
+		this.customer = customer;
+		this.alojamentos = new List<Alojamento>();
+		this.alojamentos.Add(aloj);
+
+	}
 
 }

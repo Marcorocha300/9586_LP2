@@ -1,12 +1,28 @@
+/*IPCA-2019-2020
+ * 
+ * 
+ * 
+ * 
+ */
+
+
+
 using System;
-public class Bungalow : Alojamento  {
+using System.Collections.Generic;
+
+public class Bungalow : Alojamento  
+{
+	
 	private int id;
 	private string name;
 	private float price;
 	private String attribute;
 
-	public Bungalow() {
-		throw new System.Exception("Not implemented");
+	 //protected Alojamento  { get; set; }
+
+	public Bungalow (string alojamento ): base(alojamento) 
+	{	
+
 	}
 
 }
