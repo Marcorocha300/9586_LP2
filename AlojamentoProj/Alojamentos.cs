@@ -13,6 +13,11 @@ public class Alojamentos {
 				this.alojamentoList = alojamentoList;	
 	}
 
+	/// <summary>
+	/// Adiciona Alojamento
+	/// </summary>
+	/// <param name="aloj"></param>
+	/// <returns></returns>
 	public bool AddAlojamento(Alojamento aloj) 
 	{
 		if (aloj != null)
@@ -24,6 +29,11 @@ public class Alojamentos {
 		return false;
 	}
 
+	/// <summary>
+	/// Remove Alojamento
+	/// </summary>
+	/// <param name="num"></param>
+	/// <returns></returns>
 	public bool RemoveAlojamento(string num) 
 	{	
 		Alojamento itemToRemove = (this.alojamentoList).Single(r => r.Num == num);
@@ -36,6 +46,12 @@ public class Alojamentos {
 		return false;	
 	}
 
+	/// <summary>
+	/// Alterar uma reserva
+	/// </summary>
+	/// <param name="num"></param>
+	/// <param name="reserv"></param>
+	/// <returns></returns>
 	public bool UpdateAlojamento(string num, Reserva reserv) 
 	{
 		Alojamento updateAlojamento = (this.alojamentoList).Single(r => r.Num == num);

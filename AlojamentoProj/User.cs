@@ -1,10 +1,19 @@
+/*IPCA-LESI_PL
+ * 2019_2020
+ * LP2 - Trabalho prático
+ * Marco Rocha
+ * Nº9586
+ */
+
+
 using System;
 
 public class User 
 	{
-	private string premissions;
-	private Gestor gestor;
-	private Session session;
+	string name;
+	string premissions;
+	Gestor gestor;
+	Session session;
 
 	public void Login() 
 	{

@@ -1,4 +1,13 @@
+/*IPCA-LESI_PL
+ * 2019_2020
+ * LP2 - Trabalho prático
+ * Marco Rocha
+ * Nº9586
+ */
+
 using System;
+
+
 public class Gestor 
 {
 	private Customers customer;
@@ -9,8 +18,12 @@ public class Gestor
 	private Customers customers;
 	private User user;
 
+	/// <summary>
+	/// Construtor
+	/// </summary>
 	public Gestor() 
 	{
 		throw new System.Exception("Not implemented");
 	}
+
 }
