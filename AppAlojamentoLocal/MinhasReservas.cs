@@ -19,15 +19,27 @@ namespace AppAlojamentoLocal
         {
             InitializeComponent();
         }
-        //public MinhasReservas(int user, string username)
-        //{
-        //    InitializeComponent();
-        //    this.id = user;
-        //    MessageBox.Show(username);
-        //}
+        public MinhasReservas(string username)
+        {
+            InitializeComponent();
+            textBox1.Text = username;
+            MessageBox.Show(username);
+        }
 
         private void MinhasReservas_Load(object sender, EventArgs e)
         {
+            using (AlojamentoDbEntities4 context = new AlojamentoDbEntities4())
+            {
+                var reservas = context.Reservas
+                                 .Where(s => s.idCustomer == 3);
+
+                foreach (var reserva in reservas)
+                {
+                    this.dataGridView1.Refresh();
+                    Console.WriteLine(reserva.dateReserva);
+           
+                }
+            }
             //AlojamentoDbEntities4 entities = new AlojamentoDbEntities4();
 
             //using (AlojamentoDbEntities4 context = new AlojamentoDbEntities4())
@@ -37,19 +49,19 @@ namespace AppAlojamentoLocal
             //                     .FirstOrDefault<Customer>();
 
 
-                //}   
+            //}   
 
-                //var reserva = from p in entities.Reservas
-                //              select new
-                //              {
-                //                  dateCheckIn = p.dateCheckIn,
-                //                  dateCheckOut = p.dateCheckOut,
+            //var reserva = from p in entities.Reservas
+            //              select new
+            //              {
+            //                  dateCheckIn = p.dateCheckIn,
+            //                  dateCheckOut = p.dateCheckOut,
 
-                //                   = p.ContactName,
-                //                  aís = p.Country
-                //              };
-                //dataGridView1.DataSource = reserva.ToList();
-            }
+            //                   = p.ContactName,
+            //                  aís = p.Country
+            //              };
+            //dataGridView1.DataSource = reserva.ToList();
+        }
 
             private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -83,11 +95,6 @@ namespace AppAlojamentoLocal
 
         private void buttonActualizarRes_Click(object sender, EventArgs e)
         {
-
-
-
-
-
 
             //try
             //{
@@ -129,6 +136,16 @@ namespace AppAlojamentoLocal
             //{
             //    MessageBox.Show(ex.Message, "Add Reservation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //}
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExitMinhasRes_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

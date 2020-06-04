@@ -56,6 +56,8 @@ namespace AppAlojamentoLocal
                         //MinhasReservas user = new MinhasReservas();
                         user = queryUser.id;
                         Console.WriteLine(user);
+                        MinhasReservas resShow = new MinhasReservas(textBoxUserNameLogin.Text);
+                        FormPerfil perfilShow = new FormPerfil(textBoxUserNameLogin.Text);
                     }
                     else
                     {
