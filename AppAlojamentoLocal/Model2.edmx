@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="AlojamentoDbModel4.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="AlojamentoDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Alojamento">
           <Key>
             <PropertyRef Name="id" />
@@ -116,7 +116,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AlojamentoDbModel4StoreContainer">
+        <EntityContainer Name="AlojamentoDbModelStoreContainer">
           <EntitySet Name="Alojamento" EntityType="Self.Alojamento" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Reserva" EntityType="Self.Reserva" Schema="dbo" store:Type="Tables" />
@@ -144,7 +144,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="AlojamentoDbModel4" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="AlojamentoDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Alojamento">
           <Key>
             <PropertyRef Name="id" />
@@ -264,7 +264,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AlojamentoDbEntities4" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="AlojamentoDbEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Alojamentoes" EntityType="Self.Alojamento" />
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="Reservas" EntityType="Self.Reserva" />
@@ -293,9 +293,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="AlojamentoDbModel4StoreContainer" CdmEntityContainer="AlojamentoDbEntities4">
+        <EntityContainerMapping StorageEntityContainer="AlojamentoDbModelStoreContainer" CdmEntityContainer="AlojamentoDbEntities3">
           <EntitySetMapping Name="Alojamentoes">
-            <EntityTypeMapping TypeName="AlojamentoDbModel4.Alojamento">
+            <EntityTypeMapping TypeName="AlojamentoDbModel.Alojamento">
               <MappingFragment StoreEntitySet="Alojamento">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="num" ColumnName="num" />
@@ -306,7 +306,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customers">
-            <EntityTypeMapping TypeName="AlojamentoDbModel4.Customer">
+            <EntityTypeMapping TypeName="AlojamentoDbModel.Customer">
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nome" ColumnName="nome" />
@@ -318,7 +318,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Reservas">
-            <EntityTypeMapping TypeName="AlojamentoDbModel4.Reserva">
+            <EntityTypeMapping TypeName="AlojamentoDbModel.Reserva">
               <MappingFragment StoreEntitySet="Reserva">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="dateReserva" ColumnName="dateReserva" />
@@ -331,7 +331,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Staffs">
-            <EntityTypeMapping TypeName="AlojamentoDbModel4.Staff">
+            <EntityTypeMapping TypeName="AlojamentoDbModel.Staff">
               <MappingFragment StoreEntitySet="Staff">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="nome" ColumnName="nome" />
@@ -342,7 +342,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="AlojamentoDbModel4.sysdiagram">
+            <EntityTypeMapping TypeName="AlojamentoDbModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -353,7 +353,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="AlojamentoDbModel4.User">
+            <EntityTypeMapping TypeName="AlojamentoDbModel.User">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="userName" ColumnName="userName" />
                 <ScalarProperty Name="passWord" ColumnName="passWord" />

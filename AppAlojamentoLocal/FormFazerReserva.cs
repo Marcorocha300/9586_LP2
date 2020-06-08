@@ -18,8 +18,8 @@ namespace AppAlojamentoLocal
         Customer customer = new Customer();
         Alojamento alojamento = new Alojamento();
         Reserva reserva = new Reserva();
-        User users = new User();
-        Reserva custo = new Reserva();
+        User user = new User();
+
         public FormFazerReserva()
         {
             InitializeComponent();
@@ -79,7 +79,7 @@ namespace AppAlojamentoLocal
             string bnum = textBoxNumBungalow.Text;
             if (bnum != "")
             {
-                using (var context = new AlojamentoDbEntities4())
+                using (var context = new AlojamentoDbEntities3())
                 {
                     Alojamento queryAloj = context.Alojamentoes
                                        .Where(s => s.num == textBoxNumBungalow.Text)

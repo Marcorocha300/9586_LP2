@@ -74,9 +74,9 @@ namespace AppAlojamentoLocal
             //    Console.WriteLine(e);
             //    mensagem =  e.ToString();
             //}
-            using (AlojamentoDbEntities4 db = new AlojamentoDbEntities4())
+            using (AlojamentoDbEntities3 db = new AlojamentoDbEntities3())
             {
-                using (var context = new AlojamentoDbEntities4())
+                using (var context = new AlojamentoDbEntities3())
                 {
                     //Customer queryCustomer = context.Customer
                     //                   .Where(s => s.nome == user)
@@ -94,6 +94,7 @@ namespace AppAlojamentoLocal
                         email = customer.Email
                     };
                     context.Customers.Add(newcustomer);
+     
                     context.SaveChanges();
 
                     User user = new User()
@@ -106,7 +107,9 @@ namespace AppAlojamentoLocal
      
                     context.Users.Add(user);
                     context.SaveChanges();
+
                 }
+
             }
             return (userName);
         }

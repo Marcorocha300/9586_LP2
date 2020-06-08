@@ -39,8 +39,7 @@ namespace AppAlojamentoLocal
             this.alojamentoDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.alojamentoDbDataSet = new AppAlojamentoLocal.AlojamentoDbDataSet();
             this.buttonActualizarRes = new System.Windows.Forms.Button();
-            this.buttonExitMinhasRes = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alojamentoDbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.alojamentoDbDataSet)).BeginInit();
@@ -101,34 +100,23 @@ namespace AppAlojamentoLocal
             this.buttonActualizarRes.Text = "Actualizar";
             this.buttonActualizarRes.UseVisualStyleBackColor = true;
             this.buttonActualizarRes.UseWaitCursor = true;
-            this.buttonActualizarRes.Click += new System.EventHandler(this.buttonActualizarRes_Click);
             // 
-            // buttonExitMinhasRes
+            // button
             // 
-            this.buttonExitMinhasRes.Location = new System.Drawing.Point(44, 184);
-            this.buttonExitMinhasRes.Name = "buttonExitMinhasRes";
-            this.buttonExitMinhasRes.Size = new System.Drawing.Size(75, 23);
-            this.buttonExitMinhasRes.TabIndex = 1;
-            this.buttonExitMinhasRes.Text = "Exit";
-            this.buttonExitMinhasRes.UseVisualStyleBackColor = true;
-            this.buttonExitMinhasRes.UseWaitCursor = true;
-            this.buttonExitMinhasRes.Click += new System.EventHandler(this.buttonExitMinhasRes_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(33, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.button.Location = new System.Drawing.Point(44, 184);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(75, 23);
+            this.button.TabIndex = 1;
+            this.button.Text = "Actualizar";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.UseWaitCursor = true;
             // 
             // MinhasReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(672, 350);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.buttonExitMinhasRes);
+            this.Controls.Add(this.button);
             this.Controls.Add(this.buttonActualizarRes);
             this.Controls.Add(this.dataGridView1);
             this.Name = "MinhasReservas";
@@ -138,7 +126,6 @@ namespace AppAlojamentoLocal
             ((System.ComponentModel.ISupportInitialize)(this.alojamentoDbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.alojamentoDbDataSet)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -152,7 +139,6 @@ namespace AppAlojamentoLocal
         private System.Windows.Forms.BindingSource alojamentoDbDataSetBindingSource;
         private AlojamentoDbDataSet alojamentoDbDataSet;
         private System.Windows.Forms.Button buttonActualizarRes;
-        private System.Windows.Forms.Button buttonExitMinhasRes;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button;
     }
 }

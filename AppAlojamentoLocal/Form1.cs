@@ -15,8 +15,6 @@ namespace AppAlojamentoLocal
     public partial class Form1 : Form
     {
         Thread th;// declaraçaõ da variável do tipo thread
-        public  int user;
- 
         public Form1()
         {
             InitializeComponent();
@@ -38,39 +36,41 @@ namespace AppAlojamentoLocal
 
             if (userName != "")
             {
-                using (var context = new AlojamentoDbEntities4())
+                using (var context = new AlojamentoDbEntities3())
                 {
                     User queryUser = context.Users
-                                       .Where(s => s.userName == textBoxUserNameLogin.Text && s.passWord == password)
-                                       .FirstOrDefault();
+                                       .Where(s => s.userName == textBoxUserNameLogin.Text)
+                                       .FirstOrDefault<User>();
 
-                    if (queryUser != null) 
-                    {               
-                        //string userName = "user";
-                        //string passWord = "1234";
+                    User queryPassWord = context.Users
+                                       .Where(s => s.passWord == password) //texboxPassWordLogin.Text convertida para byte)
+                                       .FirstOrDefault<User>();
+                    Close();
+
+                    //string userName = "user";
+                    //string passWord = "1234";
+                    Form1 menu1 = new Form1();
+
+                    //if ((userName == queryUser.userName) && (password == queryPassWord.passWord))
+                    //{
                         this.Close();
                         //Uso de Thread para fechar o form anterior e abrir um novo
                         th = new Thread(OpenForm2);
                         th.SetApartmentState(ApartmentState.STA);
                         th.Start();
-                        //MinhasReservas user = new MinhasReservas();
-                        user = queryUser.id;
-                        Console.WriteLine(user);
-                        MinhasReservas resShow = new MinhasReservas(textBoxUserNameLogin.Text);
-                        FormPerfil perfilShow = new FormPerfil(textBoxUserNameLogin.Text);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Login Invalido");
+                    //}
+                    //else
+                //    {
+                //        MessageBox.Show("Login Invalido");
 
-                    }
+                //    }
                 }
             }
             else 
             {
                 MessageBox.Show("preencha login");
             }
-
+            MinhasReservas user = new MinhasReservas(userName);
         }
         /// <summary>
         /// metodo para abrir a messageBox e iniciar o form2, vai ser utilizado pela Thread

@@ -35,8 +35,8 @@ namespace AppAlojamentoLocal
 
         private void buttonConsultReservas_Click(object sender, EventArgs e)
         {
-            MinhasReservas resShow = new MinhasReservas();
-            resShow.Show();
+            MinhasReservas res = new MinhasReservas();
+            res.ShowDialog();            
         }
 
         private void buttonFazerReserva_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace AppAlojamentoLocal
         {
             Close();
         }
-        #region Pictures & labels
+
         private void panelBungalows_Paint(object sender, PaintEventArgs e)
         {
 
@@ -94,7 +94,7 @@ namespace AppAlojamentoLocal
         {
 
         }
-        #endregion
+
         private void Form2_Load(object sender, EventArgs e)
         {
 

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Admin\Desktop\ProjectoLP2_v4 new\AppAlojamentoLocal_4.3\AppAlojamentoLocal\ModelAloj.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Admin\Desktop\ProjectoLP2_v4 new\AppAlojamentoLocal_4.4\AppAlojamentoLocal\Model2.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

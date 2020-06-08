@@ -13,10 +13,10 @@ namespace AppAlojamentoLocal
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class AlojamentoDbEntities4 : DbContext
+    public partial class AlojamentoDbEntities : DbContext
     {
-        public AlojamentoDbEntities4()
-            : base("name=AlojamentoDbEntities4")
+        public AlojamentoDbEntities()
+            : base("name=AlojamentoDbEntities")
         {
         }
     
@@ -24,12 +24,14 @@ namespace AppAlojamentoLocal
         {
             throw new UnintentionalCodeFirstException();
         }
-    
-        public virtual DbSet<Alojamento> Alojamentoes { get; set; }
-        public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Reserva> Reservas { get; set; }
-        public virtual DbSet<Staff> Staffs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        /// <summary>
+        /// Properties
+        /// </summary>
+        public virtual DbSet<Alojamento> Alojamento { get; set; }
+        public virtual DbSet<Customer> Customer { get; set; }
+        public virtual DbSet<Payment> Payment { get; set; }
+        public virtual DbSet<Reserva> Reserva { get; set; }
+        public virtual DbSet<Staff> Staff { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }
